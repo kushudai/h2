@@ -105,7 +105,6 @@ fn hammer_client_concurrency() {
                 client::handshake(tcp)
             })
             .then(move |res| {
-                let rsps = rsps;
                 let (mut client, h2) = res.unwrap();
                 let request = Request::builder()
                     .uri("https://http2.akamai.com/")
